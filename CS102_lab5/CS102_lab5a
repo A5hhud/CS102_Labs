@@ -8,9 +8,23 @@ public class Main {
 
         System.out.println(Main.mySearch(array0,-5));
         System.out.println(Main.mySearch(array0,32));
+
+        System.out.println(Main.mySearch(forward, 'u'));
+        System.out.println(Main.mySearch(forward, 'x'));
     }
 
+    //integers
     public static int mySearch(int[] inputArray, int key){
+        for(int i=0;i<inputArray.length;i++){
+            if(inputArray[i] == key){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    //characters
+    public static int mySearch(char[] inputArray, char key){
         for(int i=0;i<inputArray.length;i++){
             if(inputArray[i] == key){
                 return i;
